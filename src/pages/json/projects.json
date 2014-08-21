@@ -1,0 +1,16 @@
+{
+  "test": {
+    "title": "Test of tests",
+    "color": "pink",
+    "billy": true,
+    "preview": "# Lorem ipsum dolor sit amet, \n\nconsectetur …",
+    "basename": "test"
+  },
+  "test2": {
+    "title": "WHAM BAM",
+    "color": "purple",
+    "billy": false,
+    "preview": "#Lorem ipsum dolor sit amet, \n\nconsectetur …",
+    "basename": "test2"
+  }
+}

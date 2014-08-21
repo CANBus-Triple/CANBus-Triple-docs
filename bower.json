@@ -1,0 +1,20 @@
+{
+  "name": "docs.canb.us",
+  "version": "0.2.5",
+  "homepage": "https://github.com/CANBus-Triple/CANBus-Triple-docs.git",
+  "authors": [
+    "Derek K <etx313@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.3.3"
+  }
+}
