@@ -1,5 +1,12 @@
 module.exports = function(grunt){
+
+  
   grunt.initConfig({
+    
+    options: {
+      dist: './dist/app'
+    },
+  
     pkg: grunt.file.readJSON('package.json'),
 
       watch: {
@@ -16,10 +23,10 @@ module.exports = function(grunt){
           tasks: ['style']
         },
         css: {
-          files: ['./dist/styles/*.css']
+          files: ['<%= options.dist %>/styles/*.css']
         },
         livereload: {
-          files: ['./dist/**/*'],    
+          files: ['<%= options.dist %>/**/*'],    
           options: {livereload: true}
         }
       },
@@ -33,7 +40,7 @@ module.exports = function(grunt){
           // the files to concatenate
           src: ['src/**/*.js'],
           // the location of the resulting JS file
-          dest: './dist/js/<%= pkg.name %>.js'
+          dest: '<%= options.dist %>/js/<%= pkg.name %>.js'
         }
       },
         
@@ -44,7 +51,7 @@ module.exports = function(grunt){
         },
         dist: {
           files: {
-            './dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            '<%= options.dist %>/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
           }
         }
       },
@@ -66,7 +73,7 @@ module.exports = function(grunt){
       sass: {                                 
         dist: {                             
             files: {                        
-                './dist/styles/main.css': './src/sass/main.scss'
+                '<%= options.dist %>/styles/main.css': './src/sass/main.scss'
             }
         }
       },
@@ -77,7 +84,7 @@ module.exports = function(grunt){
             browsers: ['last 2 versions', '> 1%']
           },
           files: {
-            './dist/styles/main.css' : './dist/styles/main.css'
+            '<%= options.dist %>/styles/main.css' : '<%= options.dist %>/styles/main.css'
           }
         }
       },
@@ -89,7 +96,7 @@ module.exports = function(grunt){
           report: 'gzip'
           },
           files: {
-            './dist/styles/main.min.css' : './dist/styles/main.css'
+            '<%= options.dist %>/styles/main.min.css' : '<%= options.dist %>/styles/main.css'
           }
         }
       },
@@ -103,7 +110,7 @@ module.exports = function(grunt){
         },
         pages: {
           src: './src/pages/*.hbs',
-          dest: './dist/'
+          dest: '<%= options.dist %>/'
         }
       },
 
@@ -119,7 +126,7 @@ module.exports = function(grunt){
           },
           files: {
             // Destination : Source
-            './dist/index.html': './dist/index.html'
+            '<%= options.dist %>/index.html': '<%= options.dist %>/index.html'
           }
         }
       },
@@ -128,13 +135,13 @@ module.exports = function(grunt){
         server: {
           options: {
             port: 8000,
-            base: './dist/'
+            base: '<%= options.dist %>/'
           }
         }
       },
     
       clean: {
-        all: ['./dist/*.html']
+        all: ['<%= options.dist %>/*.html']
       },
 
       'gh-pages': {

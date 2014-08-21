@@ -8,8 +8,6 @@
   },
   "author": "Derek Kuschel",
   "dependencies": {
-    "gzippo": "~0.2.0",
-    "express": "~3.4.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
