@@ -111,6 +111,19 @@ module.exports = function(grunt){
         pages: {
           src: './src/pages/*.hbs',
           dest: '<%= options.dist %>/'
+        },
+        posts:{
+          files: [{
+            cwd: './src/pages/*.hbs',
+            src: '**/*.hbs',
+            dest: '<%= options.dist %>/',
+            expand: true
+          },{
+            cwd: './src/content/docs/',
+            src: ['**/*.hbs', '**/*.md'],
+            dest: '<%= options.dist %>/',
+            expand: true
+          }]
         }
       },
 
