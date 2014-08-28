@@ -6,13 +6,44 @@
   
   <meta name="viewport" content="width=device-width">
   
-  <link rel="stylesheet" href="styles/main.min.css">
-  <script src="js/canbus-triple-docs.min.js" type="text/javascript"></script>
-
+  <link rel="stylesheet" href="/styles/main.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/glq1jrb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
 </head>
 <body>
-  {{#markdown}} 
-    {{> body}}
-  {{/markdown}}  
+  {{>color-bar}}
+  <div class="row">
+    <div class="column small-12">
+      {{>main-nav}}
+    </div>
+  </div>
+  
+  {{>page-header}}
+  <div class="row" id="main-content">
+    <div class="column small-12 medium-3">
+      {{>sidebar}}
+    </div>
+    <div class="column small-12 medium-9">
+      {{#markdown}} 
+        {{> body}}
+      {{/markdown}}
+    </div>
+  </div>
+  {{>footer}}
+  
+  <script src="/js/canbus-triple-docs.min.js" type="text/javascript"></script>
+  
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4WRJ8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W4WRJ8');</script>
+  <!-- End Google Tag Manager -->
+
 </body>
 </html>

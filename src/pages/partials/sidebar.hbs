@@ -1,0 +1,10 @@
+<aside class="sidebar">
+  {{#each sidebar-categories.show}}
+    <strong>{{this}}</strong>
+    {{#each ../pages}} 
+      {{#is data.section ../this}}
+        <a {{#if isCurrentPage}} class="active"{{/if}} href="{{relativeLink}}">{{data.title}}</a>
+      {{/is}}
+    {{/each}}
+  {{/each}}
+</aside>

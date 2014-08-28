@@ -11,12 +11,16 @@ module.exports = function(grunt){
 
       watch: {
         html: {
-          files: ['./src/pages/**/*'],
+          files: ['./src/pages/**/*', './src/content/**/*'],
           tasks: ['html']
         },
         js: {
           files: ['<%= jshint.files %>'],
           tasks: ['js']
+        },
+        assets: {
+          files: ['./src/assets/**/*'],
+          tasks: ['copy']
         },
         sass: {
           files: ['./src/sass/**/*.scss'],
@@ -105,15 +109,21 @@ module.exports = function(grunt){
         options: {
           layout: './src/pages/layout/default.hbs',
           partials: './src/pages/partials/**/*.hbs',
-          data: './src/pages/json/**/*.{json,yml}',
-          flatten: true
+          data: ['./src/pages/json/**/*.{json,yml}','package.json'],
+          flatten: true,
+          helpers: [],
+          assets: 'src/assets',
+          collections: [{
+            name: 'docs',
+            sortby: 'weight',
+            sortorder: 'descending'
+          }],
         },
         pages: {
-          src: './src/pages/*.hbs',
-          dest: '<%= options.dist %>/'
-        },
-        posts:{
           files: [{
+            src: './src/pages/*.hbs',
+            dest: '<%= options.dist %>/'
+          },{
             cwd: './src/pages/*.hbs',
             src: '**/*.hbs',
             dest: '<%= options.dist %>/',
@@ -124,6 +134,9 @@ module.exports = function(grunt){
             dest: '<%= options.dist %>/',
             expand: true
           }]
+        },
+        posts:{
+          
         }
       },
 
@@ -141,6 +154,21 @@ module.exports = function(grunt){
             // Destination : Source
             '<%= options.dist %>/index.html': '<%= options.dist %>/index.html'
           }
+        }
+      },
+      
+      copy: {
+        dist: {
+          files: [{
+            expand: true,
+            dot: true,
+            cwd: './src/assets/',
+            dest: '<%= options.dist %>',
+            src: [
+              '**/*.{ico,png,txt,jpg,jpeg,svg}',
+              '**/images/{,*/}*.webp',
+            ]
+          }]
         }
       },
           
@@ -166,6 +194,7 @@ module.exports = function(grunt){
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -189,6 +218,6 @@ module.exports = function(grunt){
 
   grunt.registerTask('pub', ['default','gh-pages']);
 
-  grunt.registerTask('default', ['js', 'style', 'clean', 'html']);
+  grunt.registerTask('default', ['js', 'style', 'clean', 'html', 'copy']);
 
 };
