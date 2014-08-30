@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar show-for-medium-up">
   {{#each sidebar-categories.show}}
     <strong>{{this}}</strong>
     {{#each ../pages}} 
@@ -8,3 +8,17 @@
     {{/each}}
   {{/each}}
 </aside>
+
+<div class="show-for-small-only">
+<a href="#" data-dropdown="drop1" class="large button dropdown expand">Menu</a><br>
+<ul id="drop1" data-dropdown-content class="f-dropdown">
+  {{#each sidebar-categories.show}}
+    <strong>{{this}}</strong>
+    {{#each ../pages}} 
+      {{#is data.section ../this}}
+        <li><a {{#if isCurrentPage}} class="active"{{/if}} href="{{relativeLink}}">{{data.title}}</a></li>
+      {{/is}}
+    {{/each}}
+  {{/each}}
+</ul>
+</div>

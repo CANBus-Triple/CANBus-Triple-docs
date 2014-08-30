@@ -15,10 +15,10 @@ $header-font-family: "ff-enzo-web", "Helvetica Neue", "Helvetica", Helvetica, Ar
 // @import "../../bower_components/foundation/scss/foundation/components/block-grid";
 // @import "../../bower_components/foundation/scss/foundation/components/breadcrumbs";
 // @import "../../bower_components/foundation/scss/foundation/components/button-groups";
-// @import "../../bower_components/foundation/scss/foundation/components/buttons";
+@import "../../bower_components/foundation/scss/foundation/components/buttons";
 // @import "../../bower_components/foundation/scss/foundation/components/clearing";
-// @import "../../bower_components/foundation/scss/foundation/components/dropdown";
-// @import "../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
+@import "../../bower_components/foundation/scss/foundation/components/dropdown";
+@import "../../bower_components/foundation/scss/foundation/components/dropdown-buttons";
 // @import "../../bower_components/foundation/scss/foundation/components/flex-video";
 // @import "../../bower_components/foundation/scss/foundation/components/forms";
 // @import "../../bower_components/foundation/scss/foundation/components/icon-bar";
@@ -45,7 +45,7 @@ $header-font-family: "ff-enzo-web", "Helvetica Neue", "Helvetica", Helvetica, Ar
 // @import "../../bower_components/foundation/scss/foundation/components/top-bar";
 // @import "../../bower_components/foundation/scss/foundation/components/type";
 // @import "../../bower_components/foundation/scss/foundation/components/offcanvas";
-// @import "../../bower_components/foundation/scss/foundation/components/visibility";
+@import "../../bower_components/foundation/scss/foundation/components/visibility";
 
 
 

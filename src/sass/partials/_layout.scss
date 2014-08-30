@@ -103,7 +103,7 @@ header {
 
 .git-edit-link {
 	@include rhythm(4, 1, 2);
-	line-height: 5em;
+	line-height: 4.8em;
 	font-size: 2em;
 	color: $cbt-white;
 }
@@ -175,12 +175,11 @@ table {
 	
 	thead {
 		border-radius: 20px;
-		border: solid 3px red;
 	}
 	
 	thead tr th {
 		border-bottom: 2px solid #ddd;
-		font-size: 125%;
+		font-size: 0.8em;
 		padding: 0.75em 0.25em;
 		text-align: left;
 		vertical-align: middle;
