@@ -1,7 +1,7 @@
 ---
-title: Serial API
+title: Base Firmware Serial API
 docs: true
-section: API
+section: Firmware
 ---
 
 ### Overview

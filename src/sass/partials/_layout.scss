@@ -15,6 +15,12 @@ header img#logo {
   display: inline-block;
 }
 
+h1:first-child,
+h2:first-child,
+h3:first-child {
+	
+}
+
 
 
 .color-bar {
@@ -190,7 +196,16 @@ table {
 }
 
 
-
+pre {
+	margin: 1em 0 2em 0;
+	
+	border-collapse: inherit;
+	border-radius: 0.4em;
+	overflow: hidden;
+	border: solid 1px #ddd;
+	padding: 1em;
+	background-color: #f5f5f5;
+}
 
 
 

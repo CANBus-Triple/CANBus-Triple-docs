@@ -6,6 +6,9 @@ section: Wiring
 
 The CAN Bus spec requires a 120Ω resistor between each side of the bus pair. The CANBus Triple has these termination resistors on board, but are disabled by default. 
 
+[http://en.wikipedia.org/wiki/CAN_bus#Layers](http://en.wikipedia.org/wiki/CAN_bus#Layers)
+
+
 ### When to enable termination resistors
 
 When attaching the CANBus Triple to an active CAN Bus termination is not required. The bus you connect to is most likely already terminated on each end. 

@@ -1,4 +1,7 @@
 show:
 - Wiring
+- Hardware
 - Firmware
-- API
+- App
+- Legacy
+- Support
