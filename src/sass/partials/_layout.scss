@@ -18,13 +18,13 @@ header img#logo {
 h1:first-child,
 h2:first-child,
 h3:first-child {
-	
+
 }
 
 
 
 .color-bar {
-  
+
   span {
     display: block;
     height: 0.333em;
@@ -50,37 +50,39 @@ nav {
   float: right;
   display: block;
   height: 100%;
-  
+
   ul {
     margin: 0;
     padding: 0;
     vertical-align: middle;
     line-height: 116px;
   }
-  
+
   li {
     display: inline;
     list-style-type: none;
     padding-right: 5em;
     text-transform: uppercase;
-    
+
     &:last-child {
       padding: 0;
     }
-    
+
     a {
-      color: $cbt-blue;
+      color: $cbt-grey;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 300;
       font-style: normal;
+
     }
-    
+
     a:hover {
-      font-style: italic;
+      font-weight: 600;
+      text-decoration: underline;
     }
-    
+
   }
-  
+
 }
 
 
@@ -90,19 +92,19 @@ header {
     background-size: cover;
     /* background-color: $cbt-red; */
   }
-  
+
   h1 {
     color: $cbt-white;
     /*  text-shadow: 0px 1px 0px $cbt-red, 0px 2px 0px $cbt-red, 0px 3px 0px $cbt-red; */
     text-shadow: 0px -1px 0px $cbt-red;
     /* text-shadow: -1px 0 1px $cbt-blue, 1px 0 1px $cbt-red; */
-    
+
     @include rhythm(4, 1, 1);
     font-weight: 100;
     font-style: normal;
   }
-  
-  
+
+
 }
 
 
@@ -118,7 +120,7 @@ header {
 
 
 aside.sidebar {
-  
+
   a {
     display: block;
     padding-left: 1.5em;
@@ -127,15 +129,15 @@ aside.sidebar {
     border-left: solid 2px #ddd;
     font-weight: 100;
   }
-  
+
   a.active {
     border-left: solid 2px $cbt-blue;
   }
-  
+
   a:hover {
     text-decoration: underline;
   }
-  
+
   strong {
     position: relative;
     padding-left: 1.5em;
@@ -145,7 +147,7 @@ aside.sidebar {
     font-weight: 700;
     text-transform: uppercase;
   }
-  
+
   strong:before {
     font-size: 1em;
     content: "\f096";
@@ -154,35 +156,35 @@ aside.sidebar {
     left: -0.3em;
     opacity: 0.333;
   }
-  
+
 }
 
 table {
-	
+
 /* 	border: 1px solid grey; */
-	
+
 	margin: 1em 0 2em 0;
 	min-width: 65%;
-	
+
 	border-collapse: inherit;
 	border-radius: 0.4em;
 	overflow: hidden;
-	
+
 /* 	margin: 0 auto; */
-	
+
 	tr {
-			
+
 	}
-	
+
 	td {
 		padding: 0.75em 0.3em;
-	
+
 	}
-	
+
 	thead {
 		border-radius: 20px;
 	}
-	
+
 	thead tr th {
 		border-bottom: 2px solid #ddd;
 		font-size: 0.8em;
@@ -190,15 +192,15 @@ table {
 		text-align: left;
 		vertical-align: middle;
 	}
-	
 
-	
+
+
 }
 
 
 pre {
 	margin: 1em 0 2em 0;
-	
+
 	border-collapse: inherit;
 	border-radius: 0.4em;
 	overflow: hidden;
@@ -210,17 +212,12 @@ pre {
 
 
 footer {
-  padding: 5em 0;
+  padding: 3em 0;
   margin-top: 3em;
   /* background-color: $cbt-blue; */
-  background-color: $cbt-red;
-  color: $cbt-white;
+  // background-color: $cbt-red;
+  border-top: 2px solid $cbt-red;
+  color: $cbt-red;
+  font-family: $header-font-family;
+  font-weight: 300;
 }
-
-
-
-
-
-
-
-

@@ -1,11 +1,11 @@
 {
   "News": {
-    "link":"http://blog.canb.us"
+    "link":"http://www.canb.us/news"
   },
   "Forum": {
-    "link":"http://reddit.com/r/canbus"
+    "link":"http://forum.canb.us"
   },
   "Buy": {
-    "link":"http://canb.us"
+    "link":"http://canb.us/store"
   }
 }
