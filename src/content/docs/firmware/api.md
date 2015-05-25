@@ -17,7 +17,7 @@ The CANBus Triple is controlled by sending commands over the USB Serial connecti
 | 0x01    | 0x02        | Dump eeprom value | "1:1:0:0:0:0:0:0..." A colon delimited list of the current EEPROM data as Hex Strings |
 | 0x01    | 0x03        | Read and save eeprom | TODO |
 | 0x01    | 0x04        | Restore eeprom to stock values | Clear all EEPROM data back to default settings |
-| 0x01    | 0x10 0xN    | Print Bus N Debug to Serial | N is thr Bus number, 1 through 3 {"e":"busdgb", "name":"Bus 1", "canctrl":"7", "status":"14", "error":"150", "nextTxBuffer":"2"} |
+| 0x01    | 0x10 0x0N    | Print Bus N Debug to Serial | N is the Bus number, 1 through 3 {"e":"busdgb", "name":"Bus 1", "canctrl":"7", "status":"14", "error":"150", "nextTxBuffer":"2"} |
 | 0x01    | 0x16        | Reboot to bootloader | Restart the MCU into the Bootloader for flashing new program code |
 
 
@@ -25,9 +25,9 @@ The CANBus Triple is controlled by sending commands over the USB Serial connecti
 
 Send a CAN Packet over the specified Bus. Bus Id should be 1 through 3
 
-| Command   | Bus Id |  Message ID  | Data | Length |
-|-----------|--------|--------------|------|--------|
-| 0x02      | 01     | 290          | 00 00 00 00 00 00 00 00 | 8
+| Command   | Bus Id |  Message ID  |            Data             | Length  |
+|-----------|--------|--------------|-----------------------------|---------|
+| 0x02      | 0x01   | 0x0290       | 0x0000 0x0000 0x0000 0x0000 | 0x08    |
 
 
 ### Set USB Serial Logging Output
@@ -45,7 +45,6 @@ Send a CAN Packet over the specified Bus. Bus Id should be 1 through 3
 
 ### Set Bluetooth Message ID filter
 
-Somethign
 
 | Command | BusId | Message ID 1 | Message ID 2 | Function                               |
 |---------|-------|--------------|--------------|----------------------------------------|
