@@ -35,12 +35,14 @@ Send a CAN Packet over the specified Bus. Bus Id should be 1 through 3
 ### Set USB Serial Logging Output
 
 | Cmd  | Bus Id  | On/Off | Message ID 1 | Message ID 2 | Function |
-| 0x03 | 0x01    | 0x01   |              |              | Enable logging on bus 1 (do not touch current filter) |
+|------|---------|--------|--------------|--------------|----------|
+| 0x03 | 0x01    | 0x01   | NA           |              | Enable logging on bus 1 (do not touch current filter) |
 | 0x03 | 0x01    | 0x01   | 0x290        | 0x291        | Enable logging on bus 1 and filter only messages 0x290 and 0x291 |
 | 0x03 | 0x01    | 0x00   |              |              | Disable logging on bus 1 |
 
-Loggin With mask filters:
+#### Logging With mask filters
 | Cmd  | Bus Id  | On/Off | Message ID 1 | Mask 1 | Message ID 2 | Mask 2 | Function |
+|------|---------|--------|--------------|--------------|--------|--------|----------|
 | 0x03 | 0x01    | 0x02   | 0x290        | 0xFFF  | 0x400        | 0xFF0  | Enable logging on Bus 1 filter messages 0x290 and 0x40* (0 in mask is a wildcard)
 | 0x03 | 0x01    | 0x02   | 0x000        | 0x000                          | Enable logging on Bus 1 for ALL messages
 
