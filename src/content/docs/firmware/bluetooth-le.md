@@ -78,7 +78,7 @@ Or use a Bluetooth LE debugging app such as [LightBlue](https://itunes.apple.com
 	Service: 35e71686-b1c3-45e7-9da6-1ca2393a41f3
 	Characteristic: 5fcd52b7-4cfb-4095-aeb2-5c5511646bbf 
 
-Then you need to place the MCU into 'Passthrough Mode' by sending the command '0x08 0x03' over USB Serial, or over the BT LE Serial Characteristic (Before placing it into DFU mode).
+Then you need to place the MCU into 'Passthrough Mode' by sending the command '0x08 0x02' over USB Serial, or over the BT LE Serial Characteristic (Before placing it into DFU mode).
 
 The hardware is now ready to receive the new firmware.
 
