@@ -18,7 +18,7 @@ To lower the barrier of entry the CANBus Triple is compatible with the Arduino p
 
 If you do not have the Arduino IDE installed download and install it from here:
 
-[Arduino Downloads](http://arduino.cc/en/Main/Software) (Current Version 1.0.5)
+[Arduino Downloads](http://arduino.cc/en/Main/Software) (Current Version 1.6.0)
 
 Connect your CANBus Triple via the supplied USB cable to your Mac or PC. 
 In the Arduino IDE Select these configuration options. 
@@ -47,20 +47,26 @@ Clone the Git repo from Github, or [download a zip file](https://github.com/CANB
 
 If you're unfamiliar with Git [you can read more about it here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init). Usage of Git is recommend as we cannot merge in any improvements you make if you're not working under version control. 
 
+Clone this repo / download to your Arduino Sketchbook/hardware folder. The path should look like this
 
+	Documents/Arduino/hardware/CANBus-Triple
+
+### Setup Arduino IDE 
+
+Launch the Arduino IDE and select the newly available board variant from the menu bar under **Tools > Board > CANBus Triple**
 
 ### Add required libraries
 
 [About Arduino Libraries](http://arduino.cc/en/Guide/Libraries)
 
 To install the CAN Library select this menu option in the Arduino IDE:  
-Sketch > Import Library > Add Library...
+**Sketch > Import Library > Add Library...**
 
 Arduino will display a file browser. Navigate to the folder containing the CANBus Triple Firmware, and select the 'CANBus' folder inside of the 'library' folder within. Then repeat this process and select the 'QueueArray' folder. Both of these libraries are required to build the firmware code. 
 
 You can also simply copy the 'CANBus' and 'QueueArray' folders to the 'libraries' folder that the Arduino IDE creates in your Documents folder. That is all the Arduino IDE does when you use the previously outlined method. 
 
-You should now be able to open the Arduino Sketch file named 'CANBusTriple.ino' and select the upload button to compile and flash it onto the CANBus Triple hardware. 
+You should now be able to open the base sketch by selecting **File > Sketchbook > hardware > CANBus-Triple > avr > CANBusTriple** and clicking the upload button to compile and flash it onto the CANBus Triple hardware. 
 
 
 ### How the firmware works
